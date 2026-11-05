@@ -1,0 +1,16 @@
+package com.academy.one.exception;
+
+public class Movie {
+
+    private String title;
+
+    public Movie(){}
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+}

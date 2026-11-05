@@ -1,0 +1,4 @@
+I am really upset when people don't pay attention on exception handling.
+Today, we want to learn the proper way to do that.
+Dodatna linija
+Ovo je sad baš cool.
