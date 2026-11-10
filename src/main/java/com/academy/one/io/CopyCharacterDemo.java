@@ -9,6 +9,8 @@ import java.io.IOException;
  * FileReader
  * FileWriter
  *
+ * Decorator ->
+ *
  */
 public class CopyCharacterDemo {
     static void main(String[] args) {

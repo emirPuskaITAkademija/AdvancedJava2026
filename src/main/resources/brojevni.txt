@@ -1,0 +1,17 @@
+Java je programski jezik koji je nastao 1995 godine.
+Scanner je korisna klasa za citanje podataka 234 567.
+Danas ucimo Java IO i rad sa fajlovima.
+Temperatura u Sarajevu iznosi 23.5 stepeni.
+Prosjecna ocjena studenta je 8.75 a broj bodova 95.
+Student Emir ima 35 godina i aktivan je true.
+Student Amar ima 24 godine i aktivan je false.
+Cijena laptopa iznosi 1250.99 KM.
+Ukupan broj polaznika na akademiji je 28.
+Veliki broj 9876543210 pripada tipu long.
+Negativna temperatura iznosi -12.5 stepeni.
+Brojevi za testiranje su 10 20 30 40 50.
+Decimalni brojevi su 3.14 2.71 99.99.
+Boolean vrijednosti su true false true.
+Java podrzava binarne brojeve 0b1010 i heksadecimalne 0xFF.
+Danas je 10.11.2026 i ucimo Scanner klasu.
+Ovo je posljednja linija naseg testnog fajla.

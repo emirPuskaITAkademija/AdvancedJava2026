@@ -1,0 +1,5 @@
+Ja sam fajl čiji sadržaj valja prebaciti u neki drugi fajl.
+To će kako sam čuo biti urađeno sa  dvije nove klase koje predstavljaju dekoraciju onih klase koje čitaju
+karakter po karakter..
+
+Danas je divan dan, ali smo svi mal oumorni...
