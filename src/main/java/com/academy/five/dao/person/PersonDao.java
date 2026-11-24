@@ -4,6 +4,8 @@ import com.academy.five.dao.Dao;
 import com.academy.four.model.Gender;
 
 import java.sql.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -101,8 +103,39 @@ public class PersonDao implements Dao<Person, Integer> {
         return null;
     }
 
+
+    // JDBC API
     @Override
     public List<Person> findAll() {
+        List<Person> personList = new ArrayList<>();
+        String sqlSelect = """
+                SELECT *
+                FROM person
+                """;
+        //try-with-resource : koje varijable kreiramo u toj konstrukciji ?
+        // odgovor: one varijable koje implementiraju autocloseable interface
+        // instanca/varijabla/objekat
+        try(Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            PreparedStatement ps = conn.prepareStatement(sqlSelect); // new PersonStatementWrapper();
+            ResultSet resultSet = ps.executeQuery();) {
+            while (resultSet.next()) {
+                Person person = new Person();
+                person.setId(resultSet.getInt("id"));
+                person.setName(resultSet.getString("name"));
+                person.setSurname(resultSet.getString("surname"));
+                Date birthday = resultSet.getDate("birthday");
+                LocalDate birthdate = birthday.toLocalDate();
+                person.setBirthday(birthdate);
+                String gender = resultSet.getString("gender");
+                Gender genderEnum = Gender.valueOf(gender);
+                person.setGender(genderEnum);
+                person.setEmailAddress(resultSet.getString("email_address"));
+                personList.add(person);
+            }
+            return personList;
+        }catch (SQLException exception){
+            System.err.println(exception.getMessage());
+        }
         return List.of();
     }
 
