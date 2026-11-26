@@ -91,6 +91,13 @@ public class Person implements Serializable, Comparable<Person> {
         this.emailAddress = emailAddress;
     }
 
+    //Person person = new Person(...)
+    //person.print();
+    public void print(){
+        System.out.printf("[%s] Name :  %s, Surname: %s%n", id, name, surname);
+    }
+
+
     @Override
     public String toString() {
         return "%s, %s [%s]  '%s' '%s' '%s'".formatted(

@@ -6,6 +6,7 @@ import com.academy.four.model.Gender;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -26,7 +27,7 @@ import java.util.List;
  * executeUpdate -> UPDATE, INSERT, DELETE : int broj pogođenih redova
  * </p>
  */
-public class PersonDao implements Dao<Person, Integer> {
+public class PersonDao implements Dao<Person, Integer>{
     /**
      * Person objekat ćemo prebaciti u jedan red u tabeli u bazi podataka.
      * S jedne strane je Java klasa Person po čijem šablonu
